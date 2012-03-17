@@ -20,6 +20,8 @@ endif
 EXE_ARCH_NAME		:=	$(EXE_NAME)-$(OSTYPE)-$(ARCHTYPE)
 SRCS_C			:=	
 SRCS_CPP		:=	cpp_api.cpp
+SRCS_RFMT_C		:=	
+SRCS_RFMT_CPP		:=	mex_api.cpp
 OUT_DIR			:=	build
 SRC_DIR			:=	src
 DIST_NAME		:=	$(EXE_NAME)-v$(VERSION)
@@ -128,7 +130,7 @@ dist:
 	rm -rf tmp
 
 reformat:
-	$(REFORMAT) $(REFORMAT_OPTS) $(SRCS_C:%.c=$(SRC_DIR)/$(SRCS_C)) $(SRCS_CPP:%.cpp=$(SRC_DIR)/$(SRCS_CPP))
+	$(REFORMAT) $(REFORMAT_OPTS) $(SRCS_C:%.c=$(SRC_DIR)/$(SRCS_C)) $(SRCS_CPP:%.cpp=$(SRC_DIR)/$(SRCS_CPP)) $(SRCS_RFMT_C:%.c=$(SRC_DIR)/$(SRCS_RFMT_C)) $(SRCS_RFMT_CPP:%.cpp=$(SRC_DIR)/$(SRCS_RFMT_CPP))
 
 # include dependencies
 ifneq ($(strip $(DEPS_C)),)
