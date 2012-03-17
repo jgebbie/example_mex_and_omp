@@ -1,5 +1,5 @@
 namespace std {
 
-int cpp_api(int a, int b);
+double cpp_api(double a, double b);
 
 }
