@@ -31,7 +31,7 @@ DIST_NAME		:=	$(EXE_NAME)-v$(VERSION)
 #   Machine-specific flags
 #   ----------------------------------------------------------------------------
 
-CFLAGS.linux.i686	:=	_D_LINUX
+CFLAGS.linux.i686	:=	-D_LINUX
 LDFLAGS.linux.i686	:=	-static
 
 CFLAGS.darwin.i686	:=	-D_DARWIN
