@@ -75,6 +75,10 @@ REFORMAT_OPTS		:=	--style=linux \
 #CFLAGS			+=	-D_FEATURE
 #CINCLUDES		+=	-I$(INC_DIR)
 
+# set target machine architecture to corei7
+CFLAGS			+=	-march=corei7
+CFLAGS			+=	-fPIC
+
 
 #   ----------------------------------------------------------------------------
 #   Setup compiler flags
